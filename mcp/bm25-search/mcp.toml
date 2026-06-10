@@ -1,0 +1,5 @@
+[server]
+name = "bm25-search"
+version = "1.0.0"
+description = "BM25 search over Treasury Bulletin corpus"
+entrypoint = "server.py:mcp"

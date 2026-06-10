@@ -1,0 +1,6 @@
+[server]
+entrypoint = "treasury_mcp.py:treasury_app"
+
+[server.dependencies]
+fastmcp = "*"
+pandas = "*"

@@ -1,0 +1,15 @@
+name: my-agent
+competition: office-qa
+
+agent:
+  harness_name: goose
+  model: "google/gemini-2.5-flash"
+  prompt_template_path: "prompts/system.j2"
+  skills_dir: "skills/"
+  config:
+    reasoning_effort: "high"
+  env:
+    GOOGLE_API_KEY: "${oc.env:GOOGLE_API_KEY,''}"
+
+environment:
+  timeout_per_task: 600
