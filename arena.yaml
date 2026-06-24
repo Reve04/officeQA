@@ -3,13 +3,12 @@ competition: office-qa
 
 agent:
   harness_name: goose
-  model: "google/gemini-2.5-flash"
+  model: "openrouter/minimax/minimax-2.7"
   prompt_template_path: "prompts/system.j2"
-  skills_dir: "skills/"
+  mcp_dir: "mcp"
   config:
     reasoning_effort: "high"
-  env:
-    GOOGLE_API_KEY: "${oc.env:GOOGLE_API_KEY,''}"
+    max_turns: 60  # CRITICAL: Prevents the 30-turn session cut-off
 
 environment:
-  timeout_per_task: 600
+  timeout_per_task: 900
